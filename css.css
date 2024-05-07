@@ -23,6 +23,32 @@ body {
   border-radius: 6px;
 }
 
+body:has(.box:nth-child(4n):hover) .box:nth-child(4n) {
+
+  animation: verticalScroll .5s infinite linear;
+
+
+}
+
+body:has(.box:nth-child(4n + 2):hover) .box:nth-child(4n + 2) {
+
+  animation: verticalScroll .5s infinite linear;
+
+}
+
+
+body:has(.box:nth-child(4n - 1):hover) .box:nth-child(4n -1) {
+  /* 3,7, 11 +4 3n+4 */
+  animation: RverticalScroll .5s infinite linear;
+
+}
+
+
+body:has(.box:nth-child(4n - 3):hover) .box:nth-child(4n - 3) {
+  /* 3,7, 11 +4 3n+4 */
+  animation: RverticalScroll .5s infinite linear;
+
+}
 
 @keyframes verticalScroll {
 
