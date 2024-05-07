@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  gap: 10px;
+  max-width: 20%;
+  grid-template-columns: repeat(4, 3fr);
+
+}
+
+.box:nth-child(2n) {
+  margin-top: 1rem;
+  background-color: blue;
+
+}
+
+.box {
+  background-color: rgb(215, 62, 62);
+  width: 100px;
+  height: 150px;
+  border-radius: 6px;
+}
+
+
+@keyframes verticalScroll {
+
+  to {
+    transform: translateY(120%);
+  }
+
+}
+
+@keyframes RverticalScroll {
+
+  to {
+    transform: translateY(-120%);
+  }
+
+}
+
+
+
+@media (max-width:500px) {
+
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .box:nth-child(3n + 2) {
+    background-color: rgb(215, 62, 62);
+    margin: 0;
+  }
+
+  .box:nth-child(2n) {
+    background-color: blue;
+    margin: 0;
+
+  }
+
+  @keyframes RverticalScroll{
+    to{transform: translateX(none);}    
+  }
+  @keyframes verticalScroll{
+    to{transform: translateX(none);}    
+  }
+
+}
