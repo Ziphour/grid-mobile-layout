@@ -15,7 +15,7 @@ body {
   color: gold;
   width: 100px;
   height: 150px;
-  border-radius: 6px;
+  border-radius: .4rem;
 }
 
 
@@ -71,18 +71,13 @@ body:has(.box:nth-child(4n - 3):hover) .box:nth-child(4n - 3) {
 
 /* media queries breakpoints */
 
-@media (max-width:500px) {
+@media (max-width:600px) {
 
   .grid {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .box:nth-child(3n + 2) {
-    background-color: rgb(215, 62, 62);
-    margin: 0;
-  }
-
-  .box:nth-child(2n) {
+  .box:nth-child(even) {
     background-color: blue;
     margin: 0;
 
@@ -92,7 +87,9 @@ body:has(.box:nth-child(4n - 3):hover) .box:nth-child(4n - 3) {
     to{transform: translateX(none);}    
   }
   @keyframes verticalScroll{
-    to{transform: translateX(none);}    
+    to{transform: translateX(none);
+      
+    }    
   }
 
 }
